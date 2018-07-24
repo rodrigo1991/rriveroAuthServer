@@ -34,9 +34,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Value("${security.signing-key}")
 	private String signingKey;
 
-	@Value("${security.encoding-strength}")
-	private Integer encodingStrength;
-
 	@Value("${security.security-realm}")
 	private String securityRealm;
 

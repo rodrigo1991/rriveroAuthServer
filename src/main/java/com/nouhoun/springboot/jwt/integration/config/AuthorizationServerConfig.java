@@ -37,6 +37,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Value("${security.jwt.grant-type}")
 	private String grantType;
 
+	@Value("${security.jwt.scope-nada}")
+	private String scopeNada;
+	
 	@Value("${security.jwt.scope-read}")
 	private String scopeRead;
 
@@ -67,7 +70,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         .withClient(clienteBasico)
         .secret(new BCryptPasswordEncoder().encode(clienteSecreto))
         .authorizedGrantTypes(grantType)
-        .scopes(scopeRead)
+        .scopes(scopeNada)
         .resourceIds(resourceIds);
 	}
 
